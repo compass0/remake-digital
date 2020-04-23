@@ -1,0 +1,16 @@
+exception catch해서 발견하는게 효율적일까
+아니면 미리 발견해서 exception 발생안시키는게 좋을까
+
+지역변수가 너무 멀리 목표함수까지 전달되어야할때 하나하나 파라미터 다 달리는데 그 한쪽으로만 전달되기 위해
+이럴때는 전역변수가 더 효율적일까
+근데 font_pos를 전역변수로 하자니 관련있는 
+    font_file_path = "C:\\Users\\remake\\gdrive\\remake\\font-compat-test-service\\data\\font_v5_20200306\\font\\"
+    eng_font_file_list = glob.glob(font_file_path + 'ENG\\*')
+    kor_font_file_list = glob.glob(font_file_path + 'KOR\\*')
+이런것들도 함께 전역변수화 시켜야 할거 같은데
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+서버에서 git 계정 설정 로컬로 했는데 왜 commit 에러 발생하는지
