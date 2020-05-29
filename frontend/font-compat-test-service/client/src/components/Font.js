@@ -2,11 +2,15 @@ import React from 'react';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 
+import FontTest from './FontTest/FontTest'
+
 class Font extends React.Component{
+    
     render(){
         return (
             <TableRow>
                 <TableCell>{this.props.name}</TableCell>
+                <TableCell >{this.props.statement}</TableCell>
                 <TableCell><img src={this.props.renderimage} alt="result"/></TableCell>
             </TableRow>
             // <div>

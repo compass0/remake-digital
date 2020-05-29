@@ -13,6 +13,8 @@ import os.path
 # from pathlib import Path
 from os import rename
 
+
+
 def word_wrap(image, ctx, text, roi_width, roi_height):
     """Break long text to multiple lines, and reduce point size
     until all text fits within a bounding box."""
@@ -194,6 +196,7 @@ def gen_font_image(font, message, letter_size = 32, img_path = 'C:\\Users\\remak
             
                 return True, message_pass_index, message_fail_index
             
+            z
             # print((np.where(img_numpy_grayscale == 0)[0]).size == 0)
             # print(img_numpy_grayscale.shape)
             # print(np.where(img_numpy_grayscale == 0)[0])
@@ -203,9 +206,10 @@ def main():
     # img_path = 'C:\\Users\\remake\\gdrive\\remake\\font-compat-test-service\\data\\image\\letter_display.png'
     # letter_size = 32
 
-    input_message = sys.argv[1]
+    # input_message = sys.argv[1]
     # input_message = """뷁 붹 쉙 줿 줾 퀢 퀽 뷬 췱 칅"""
     # input_message = "€₺£₩"
+    input_message = "!?@#!@#?"
     # input_message = input_message.encode('utf-8').decode('utf-8')
     # print(input_message)
 
@@ -213,7 +217,7 @@ def main():
     remove all whitespace characters
     
     '''
-    input_message = ''.join(input_message.split())
+    # input_message = ''.join(input_message.split())
 
     font_file_path = "C:\\Users\\remake\\gdrive\\remake\\font-compat-test-service\\data\\font_v5_20200306\\font\\"
     
@@ -225,6 +229,7 @@ def main():
     
     eng_font_file_list = glob.glob(font_file_path + 'ENG\\*')
     kor_font_file_list = glob.glob(font_file_path + 'KOR\\*')
+    unclassified_font_file_list = glob.glob(font_file_path + 'unclassified\\*')
 
     # print(type(eng_font_file_list[1]))
     # print(type(kor_font_file_list[1]))
@@ -232,7 +237,7 @@ def main():
     
     i = 0
     success_num = 0
-    for font_file_list in (kor_font_file_list, eng_font_file_list):
+    for font_file_list in (kor_font_file_list, eng_font_file_list, unclassified_font_file_list):
         for font in font_file_list:
             # print(type(font))
 
